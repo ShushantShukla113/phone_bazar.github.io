@@ -1,0 +1,257 @@
+*{
+    margin: 2px;
+    box-sizing: border-box;
+}
+ body{
+  background-image: url('/image/bodybanner.jpg');
+  background-size: 100%;
+   margin: 0px;
+   display:flex;
+   flex-direction: column;
+   
+}
+#nav{
+    cursor: pointer;
+}
+.nav-bar{
+    margin: 0px;
+    background-image: url("/image/banner.jpg");
+    min-height: 50px;
+    margin: 0%;
+}
+.nav-bar img:first-child{
+    margin-top: 4px;
+    max-width: 50px;
+    border-radius: 50%;
+    height:50px;
+    margin-bottom: 0px;
+}
+#art{
+    width: 18%;
+}
+
+.side-menu{
+    display:inline-block;
+    position:relative;
+}
+.menu-content{
+    display:none;
+  position: absolute;
+  background-color: #f1f1f1;
+  border: solid rgba(117, 114, 114, 0.658) 2px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.menu-content a{
+    display: grid;
+    padding-top: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    
+
+}
+.menu-content a:hover{background-color: rgba(117, 114, 114, 0.658);
+color: aliceblue;}
+.menu-content a:hover:first-child,:last-child{
+
+border-radius: 10px;
+}
+.show{
+    display: block;
+}
+.main-content{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -1%;
+    margin-left: 10%;
+}
+.side-menu a{
+    color: black;
+    text-decoration: none;
+    font-size: larger;
+}
+.song-banner-side{
+   max-height: 410px;
+   min-width: 300px;
+   padding-bottom: 5px;
+   padding-left: 1px;
+   margin-right: 80px;
+   margin-bottom: 20px;
+   flex-shrink: 1;
+   text-align:center;
+   display:inline-block;
+   list-style:none;
+   position:relative;
+   border:solid 12px #fff;
+  background:#fff;
+  box-shadow:0 0 15px 0px #555; 
+  transition:all 1.5s ease;
+  -o-transition:all 1.5s ease;
+  -moz-transition:all 1.5s ease;
+  -webkit-transition:all 1.5s ease;
+  transform: rotate(10deg);	
+	
+}
+
+.song-banner-side img{  max-height: 315px;
+    min-width: 300px;
+
+}
+.song-banner-side p{
+    font-family: 'Homemade Apple', cursive;
+    font-size:20px;
+}
+.song-banner-side:hover{
+    transform: rotate(355deg); 
+}
+.name:hover{
+    font-size: larger;
+}
+
+.song-list-item i:onclick .song-banner-side{
+    transform: rotate(355deg); 
+}
+
+.song-list{
+    
+    
+   background-color: transparent;
+    max-height: 400px;
+    min-width: 600px;
+   overflow: hidden;
+   overflow-y: scroll;
+   padding-left: 0%;
+  
+}
+
+#song-info{
+   
+    
+}
+
+.song-list-item{
+    display: flex;
+    flex-direction: row;
+    border-radius: 10%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(240, 213, 179);
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    
+
+}
+.name{
+    font-size: 25px;
+    font-family: 'Homemade Apple', cursive;
+}
+.time{
+    font-size: 30px;
+    font-family: 'Homemade Apple', cursive;
+}
+
+.song-list-item img{
+    max-height: 40px;
+    padding:5px  30px 0px 10px;
+    border-radius: 100%;
+   
+
+}
+.list-area{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.play-section{
+    background-color: rgb(4, 4, 7);
+    min-height: 80px;
+    margin: 50px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+}
+#my-progressbar{
+    min-width: 100vh;
+    cursor: pointer;
+    
+}
+
+.main-song img{
+    max-height: 60px;
+    min-width:250px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+   
+}
+.main-song{
+    position: absolute;
+    left: 0%;
+    bottom:0%;   
+}
+#time-duration{
+    color: aliceblue;
+    position: absolute;
+    padding-left: 710px;
+    bottom:8vh;
+    font-size: large;
+}
+#volume-bar{
+   margin-inline-end: 10%;
+}
+#main-song-name{
+    color: antiquewhite;
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+    font-size: x-large;
+    font-family: 'Homemade Apple', cursive;
+}
+.volume{
+    color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+}
+.volume img{
+    max-height: 20px;
+}
+
+.icon i{
+    cursor:pointer;
+    color: aliceblue;
+}
+@media only screen and (max-width:920px) {
+    .song-list {
+        min-width:400px;
+    }
+    .song-banner-side img {
+        max-height: 260px;
+        min-width: 250px;
+    }
+    .song-banner-side {
+        max-height: 325px;
+        min-width: 288px;
+        margin-right: 40px;
+    }
+    #my-progressbar {
+        min-width: 45vh;
+    }
+    .icon{
+        margin-left: 100px;
+    }
+    #time-duration {
+        bottom: 62px;
+    }
+    
+.play-section {
+    margin-top: 168px;
+}
+
+    
+}

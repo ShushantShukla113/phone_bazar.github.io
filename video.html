@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video-song</title>
+    <link rel="icon" href="https://cdn.iconscout.com/icon/premium/png-256-thumb/new-year-song-2-1092197.png">
+     <style>
+     *{
+     margin: 2px;
+     box-sizing: border-box;
+    }
+    body{
+    background-image: url('https://wallpaperaccess.com/full/2903830.jpg');
+    background-size: 100%;
+    margin: 0px;
+    display:flex;
+    flex-direction: column;
+    
+    }
+    #nav{
+        cursor: pointer;
+    }
+    .nav-bar{
+        margin: 0px;
+        background-color: rgba(100, 100, 197, 0.856);
+        min-height: 50px;
+        margin: 0%;
+    }
+    .nav-bar img:first-child{
+        margin-top: 4px;
+        max-width: 50px;
+        border-radius: 50%;
+        height:50px;
+        margin-bottom: 0px;
+    }
+    .side-menu{
+    display:inline-block;
+    position:relative;
+}
+.menu-content{
+    display:none;
+  position: absolute;
+  background-color: #f1f1f1;
+  border: solid rgba(117, 114, 114, 0.658) 2px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.menu-content a{
+    display: grid;
+    padding-top: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    
+
+}
+.menu-content a:hover{background-color: rgba(117, 114, 114, 0.658);
+color: aliceblue;}
+.menu-content a:hover:first-child,:last-child{
+
+border-radius: 10px;
+}
+.show{
+    display: block;
+}
+.main-content{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -1%;
+    margin-left: 10%;
+}
+.side-menu a{
+    color: black;
+    text-decoration: none;
+    font-size: larger;
+}
+.play{
+    display: flex;
+    flex-direction: row;
+    flex-basis: content;
+    justify-content: center;
+}
+.video_play{
+    border: #f1f1f1 solid 4px;
+    border-radius: 50px;
+    border-style:inset;
+    margin: 30px;
+}
+     </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <img src="/image/music-icon.png" alt=""  >
+    </nav>
+    <nav class="side-menu">
+        <img onclick="dropFunction()"  class="side-icon" src="/image/menu-icon.png" alt="" id="nav">
+        <div class="menu-content" id="content">
+            <a href="spotify.html">main</a>
+            <a href="">video songs</a>
+            <a href="#">your account</a>
+            <a href="#">play list</a>
+            <a href="#">help</a>
+        </div>
+    </nav>
+    <section class="play" id="play">
+        <iframe class="video_play" width="560" height="315" src="https://www.youtube-nocookie.com/embed/2kgEc6oH9J0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="video_play" width="560" height="315" src="https://www.youtube-nocookie.com/embed/37pnbV4mViY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+    
+</body>
+<script>
+    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function dropFunction() {
+    document.getElementById("content").classList.toggle("show");
+  }
+  // Close the dropdown menu if the user clicks outside of it
+
+window.onclick = function(event) {
+    if (!event.target.matches('.side-icon')) {
+      var dropdowns = document.getElementsByClassName("menu-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
+</html>
